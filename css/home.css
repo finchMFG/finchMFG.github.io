@@ -1,0 +1,28 @@
+.home h1{
+  color: white;
+  font-size: 40px;
+}
+
+.home h1 img{
+  height: 80px;
+  position: relative;
+  top: 28px;
+  left: -2px;
+}
+
+.home a{
+  color: #ff5d28;
+  text-decoration: none;
+}
+
+.home .links a{
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  color: #c5c5c5;
+  transition: .2s;
+}
+
+.home .links a:hover{
+  color: white;
+}
