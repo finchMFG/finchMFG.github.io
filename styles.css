@@ -18,7 +18,6 @@ nav a{
   margin: 0px 5px;
   font-weight: 700;
   color: #c5c5c5;
-  transition: .2s;
 }
 nav a:hover, .active{
   color: white;
@@ -34,10 +33,9 @@ nav a:hover, .active{
   left: 0;
   display: table;
   padding-bottom: 85px;
-
 }
 
-.blogs{
+.quickBlog{
   position: fixed;
   bottom: 0;
   display: inline-block;
@@ -48,7 +46,7 @@ nav a:hover, .active{
   border-right: 1px solid #bdbdbd;
 }
 
-.blogs .post{
+.quickBlog .post{
   display: inline-block;
   float: left;
   background: white;
@@ -63,4 +61,15 @@ nav a:hover, .active{
 .post .title{
   font-size: 20px;
   color: #272727;
+}
+
+
+.left{
+  transform: translateX(-200%);
+  transition: .3s;
+}
+
+.right{
+  transform: translateX(200%);
+  transition: .3s;
 }

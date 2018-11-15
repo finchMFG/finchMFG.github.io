@@ -8,7 +8,7 @@ function Router(routes) {
         this.constructor(routes);
         this.init();
     } catch (e) {
-        console.error(e);   
+        console.error(e);
     }
 }
 
@@ -21,7 +21,7 @@ Router.prototype = {
     },
     init: function () {
         var r = this.routes;
-        (function(scope, r) { 
+        (function(scope, r) {
             window.addEventListener('hashchange', function (e) {
                 scope.hasChanged(scope, r);
             });
@@ -34,6 +34,21 @@ Router.prototype = {
                 var route = r[i];
                 if(route.isActiveRoute(window.location.hash.substr(1))) {
                     scope.goToRoute(route.htmlName);
+                    if(route.name.includes('web') || route.name.includes('game')){
+                      window.document.title = route.name.charAt(0).toUpperCase() + route.name.slice(1) + ' by FinchMFG'
+                      document.getElementsByClassName('quickBlog')[0].style.display = 'block'
+                    }else{
+                      window.document.title = 'FinchMFG'
+                      document.getElementsByClassName('quickBlog')[0].style.display = 'block'
+                    }
+
+                    if(route.name.includes('blog')){
+                      window.document.title = 'Rambles by FinchMFG'
+                      document.getElementsByClassName('quickBlog')[0].style.display = 'none'
+                    }else{
+                      document.getElementById('app').style.top = "0";
+                      document.getElementById('app').style.bottom = "0";
+                    }
                 }
             }
         } else {
@@ -46,7 +61,7 @@ Router.prototype = {
         }
     },
     goToRoute: function (htmlName) {
-        (function(scope) { 
+        (function(scope) {
             var url = 'views/' + htmlName,
                 xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {

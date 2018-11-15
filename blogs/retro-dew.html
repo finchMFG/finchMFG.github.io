@@ -1,52 +1,47 @@
-<div class="blog">
-  # A Dew&trade; filled Retrospective
+<div>
+  <div class="title">
+    A Dew&trade; filled Retrospective
+  </div>
+  <div class="meat">
+    6 months ago ForgeHub had made an announcement that they would no longer be hosting Halo Online ( ElDewrito ) maps on their website. This blow came only a few weeks after Microsoft banned the mod which had been in development for years up until this point, from being worked on further. ForgeHub at the time was the largest Halo Online map repository, second only to the "Spreadsheet" ( a community maintained sheet containing links to maps ) and HaloVault. Looking for a fun challenge and wanting to help the community, I proclaimed that I would "build a website in 3 days and all will be well in the world!"
 
-  6 months ago ForgeHub had made an announcement that they would no longer be hosting Halo Online ( ElDewrito ) maps on their website. This blow came only a few weeks after Microsoft banned the mod which had been in development for years up until this point, from being worked on further. ForgeHub at the time was the largest Halo Online map repository, second only to the "Spreadsheet" ( a community maintained sheet containing links to maps ) and HaloVault. Looking for a fun challenge and wanting to help the community, I proclaimed that I would "build a website in 3 days and all will be well in the world!"
+    This is what I learned.
 
-  This is what I learned.
+    ## The problem with rapid development
 
-  ## The problem with rapid development
+    I strongly believe in the MVP, and am a proponent of the saying "If you are not embarrassed by the first version of your product, you've launched too late." by Reid Hoffman, and boy was I embarrassed by the first iteration of DewritoHub. Launched after ~4 days of development, it was plagued with issues that took months to sort out. Ranging from images and maps not always uploading, to hours of downtime, DewritoHub had it all. Not to mention it was a blatant ( and poorly made ) copy of ForgeHub! But wow did the community ever swarm to it quick! Within the first few days dozens of maps were uploaded and the site was getting thousands of views a from hundreds of unique visitors! They were engaged with the platform, and it was great! But the more I patched, the more problems would arise.
 
-  I strongly believe in the MVP, and am a proponent of the saying "If you are not embarrassed by the first version of your product, you've launched too late." by Reid Hoffman, and boy was I embarrassed by the first iteration of DewritoHub. Launched after ~4 days of development, it was plagued with issues that took months to sort out. Ranging from images and maps not always uploading, to hours of downtime, DewritoHub had it all. Not to mention it was a blatant ( and poorly made ) copy of ForgeHub! But wow did the community ever swarm to it quick! Within the first few days dozens of maps were uploaded and the site was getting thousands of views a from hundreds of unique visitors! They were engaged with the platform, and it was great! But the more I patched, the more problems would arise.
+    Despite the website being broken, I was getting more than a million hits per month from tens of thousands of unique users. The community was growing rapidly and users were helping any way they could! Including providing awesome logos, and contributing high-quality code to the repository. The website that I built in a weekend was quickly overtaking every alternative on the scene.
 
-  Despite the website being broken, I was getting more than a million hits per month from tens of thousands of unique users. The community was growing rapidly and users were helping any way they could! Including providing awesome logos, and contributing high-quality code to the repository. The website that I built in a weekend was quickly overtaking every alternative on the scene.
+    ## Why I needed to rebuild
 
-  ## Why I needed to rebuild
+    Despite DewritoHub being mostly stable with only minor issues still cropping up, why would I need to rebuild? Well there are a few reasons for this. One of the largest was that the three most requested features ( image organization, changing out images and adding an upload progress bar ) would require a whole new way of uploading the data. This coupled with my strong dislike of how the site looked led me to deciding that a flat-out overhaul would be the way to go. Some key things I wanted to include in this rebuild were:
 
-  Despite DewritoHub being mostly stable with only minor issues still cropping up, why would I need to rebuild? Well there are a few reasons for this. One of the largest was that the three most requested features ( image organization, changing out images and adding an upload progress bar ) would require a whole new way of uploading the data. This coupled with my strong dislike of how the site looked led me to deciding that a flat-out overhaul would be the way to go. Some key things I wanted to include in this rebuild were:
+    * Have an API to allow others to take advantage of DewritoHubs success
+    * Have a unique and fresh design
+    * Promote more Halo Online Communities
+    * Have a better architecture
 
-  * Have an API to allow others to take advantage of DewritoHubs success
-  * Have a unique and fresh design
-  * Promote more Halo Online Communities
-  * Have a better architecture
-
-  So I rebuilt the site with these core concepts in mind, and a little over a month later I launched the alpha. And it was really unstable! Uploads weren't always going through, I accidentally wiped a few user accounts due to improper Mongo commands, and updates weren't saving to users maps. So as far as DewritoHub launches go, it was wildly successful! Users really liked it, and a few were committed to helping me solve those issues ( Thanks @ice_bear! ) and it's finally stable able after about a week.
-
-
-  ## What I wish I did differently
-
-  A few things I wish I did different are mostly down to how I'm storing map related files. Right now I have 3 ( three ) buckets, one for Maps, Thumbnails and Images. When a file gets uploaded it just gets added to the root directory, so I have thousands of files with no real order to them. This isn't really a bad thing, but it makes keeping track of these files manually quite time consuming. Having sorted each file by map, or even user would have been nice. Another thing I wish I did was add IPFS support! I had been meaning to, but I was too focused on fixing bugs to properly add it. It wouldn't have made much of a difference admittedly, but IPFS is really cool and I think more projects should use it! Plus having a layer of redundancy never hurts.
-
-  ## The future of DewritoHub and Halo Online
-
-  I don't know what the future holds for Halo Online or the DewritoHub community, but I know that I'll be here till the end. I just recently launched a Dedicated Server for the game, so I'm still actively trying to be part of this community even if I don't play it much these days. I expect to continuously patch DewritohHub to fix bugs, but I don't think I'll be adding any more features.
-
-  Halo Online is a great game, filled with wonderful users and great services built around it. I really do think it's shame Microsoft shut down the mod, but I'm thankful the developers were able to accomplish so much.
+    So I rebuilt the site with these core concepts in mind, and a little over a month later I launched the alpha. And it was really unstable! Uploads weren't always going through, I accidentally wiped a few user accounts due to improper Mongo commands, and updates weren't saving to users maps. So as far as DewritoHub launches go, it was wildly successful! Users really liked it, and a few were committed to helping me solve those issues ( Thanks @ice_bear! ) and it's finally stable able after about a week.
 
 
-  ## Fun stats
+    ## What I wish I did differently
 
-  DewritoHub peaked at 2MIL hits / month for 2 months before falling into a stable ~180K / month.
+    A few things I wish I did different are mostly down to how I'm storing map related files. Right now I have 3 ( three ) buckets, one for Maps, Thumbnails and Images. When a file gets uploaded it just gets added to the root directory, so I have thousands of files with no real order to them. This isn't really a bad thing, but it makes keeping track of these files manually quite time consuming. Having sorted each file by map, or even user would have been nice. Another thing I wish I did was add IPFS support! I had been meaning to, but I was too focused on fixing bugs to properly add it. It wouldn't have made much of a difference admittedly, but IPFS is really cool and I think more projects should use it! Plus having a layer of redundancy never hurts.
 
-  The redesign spiked to 106K hits in the last week. That's ~60% of the traffic the last month received! Holy cow!
+    ## The future of DewritoHub and Halo Online
 
-  The total data stored is only around ~1.5GB!
+    I don't know what the future holds for Halo Online or the DewritoHub community, but I know that I'll be here till the end. I just recently launched a Dedicated Server for the game, so I'm still actively trying to be part of this community even if I don't play it much these days. I expect to continuously patch DewritohHub to fix bugs, but I don't think I'll be adding any more features.
 
-  Thanks for reading!
+    Halo Online is a great game, filled with wonderful users and great services built around it. I really do think it's shame Microsoft shut down the mod, but I'm thankful the developers were able to accomplish so much.
 
-  <script>
-  var converter = new showdown.Converter(),
-  text = document.getElementsByClassName('meat')[0].innerHTML
-  document.getElementsByClassName('meat')[0].innerHTML = converter.makeHtml(text)
-</script>
+
+    ## Fun stats
+
+    * DewritoHub peaked at 2MIL hits / month for 2 months before falling into a stable ~180K / month.
+    * The redesign spiked to 106K hits in the last week. That's ~60% of the traffic the last month received! Holy cow!
+    * The total data stored is only around ~1.5GB!
+
+    Thanks for reading!
+  </div>
 </div>

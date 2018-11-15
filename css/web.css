@@ -48,7 +48,7 @@
   height: calc(100% - 5px);
   position: relative;
 }
-.con{
+.web .con{
   top: 50%;
   transform: translateY(-50%);
   position: relative;

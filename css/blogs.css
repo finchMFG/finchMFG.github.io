@@ -1,0 +1,33 @@
+.blogs .con{
+  background: white;
+  padding: 60px;
+  border-radius: 3px;
+}
+
+.blogs .con .title{
+  margin-top: -10px;
+  color: #252525;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.con .meat{
+  color: #191919;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  white-space: pre-line;
+}
+
+.blogs .con{
+  cursor: pointer;
+}
+
+h2, p, ul{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li{
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
