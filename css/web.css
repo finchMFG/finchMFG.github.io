@@ -17,9 +17,43 @@
   float: left;
 }
 
+.web{
+  height: 100%;
+}
+
 .project{
   display: inline-block;
+  height: 100%;
+  position: relative;
 }
+
+.more{
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.more .direction{
+  float: right;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 10px;
+  margin-left: 15px;
+  background: white;
+  color: #2d2d2d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.info{
+  height: calc(100% - 5px);
+  position: relative;
+}
+.con{
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
 
 .project:nth-of-type(n+2){
   margin-top: 40px;
@@ -32,15 +66,14 @@
   font-weight: 700;
 }
 
-.links{
-  margin-top: 20px;
+.web .links{
+  margin-top: 25px;
 }
-.links a{
+.web .links a{
   color: #c5c5c5;
   text-decoration: none;
   font-weight: 700;
   transition: .2s;
-  border-bottom: 2px solid #ff5d28;
   margin-right: 10px;
 }
 .links a:hover{
@@ -51,5 +84,5 @@
   color: white;
   font-weight: 700;
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
