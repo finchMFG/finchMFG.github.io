@@ -5,7 +5,6 @@
     var router = new Router([
       new Route('home', 'home.html', true),
       new Route('websites', 'websites.html', false),
-      new Route('blog', 'blogs.html', false)
     ]);
   }
   init();
